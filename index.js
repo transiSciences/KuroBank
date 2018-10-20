@@ -18,12 +18,11 @@ fs.readdir('./commands/', (err, files) => {
 })
 
 Client.on('ready', () => {
-    Client.user.setActivity('Restricted mode enable | k!help', { type: 'WATCHING' });
+    Client.user.setActivity('Restricted mode disable | k!help', { type: 'WATCHING' });
     log(`Logged in as: ${settings.name} ${settings.version} ${settings.lang}`);
 })
 
 Client.on('message', message => {
-    if (!message.author.id === process.env.OWNERID) return;
     if (message.channel.type === 'dm') return;
     if (message.author === Client.user) return;
     if (message.content.indexOf(settings.prefix) !== 0) return;
