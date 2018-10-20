@@ -11,7 +11,6 @@ exports.run = (Client, message, args) => {
             economy.fetchBalance(usr.id).then(db => {
                 let targetToWithdraw = parseInt(db.money);
                 total_withdrawing = targetToWithdraw - (targetToWithdraw * 2);
-                console.log(total_withdrawing)
             })
             economy.updateBalance(usr.id, -392);
             economy.fetchBalance(usr.id).then(db => {
