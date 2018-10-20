@@ -3,7 +3,7 @@ const settings = require('../settings.json');
 const economy = require('discord-eco');
 
 exports.run = (Client, message, args) => {
-    if (message.author.id !== '375966230265462785') return message.channel.send(":x: Cette fonction est en développement :hammer_pick:, seul le développeur peut l'utiliser");
+    if (message.author.id !== process.env.OWNERID) return message.channel.send(":x: Cette fonction est en développement :hammer_pick:, seul le développeur peut l'utiliser");
     if (message.guild.member(message.author).hasPermission('ADMINISTRATOR') || message.author.id === '375966230265462785') {
         let usr = message.mentions.users.first();
         if (usr) {
