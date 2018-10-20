@@ -33,9 +33,7 @@ Client.on('message', message => {
     try {
         let commandFile = require(`./commands/${command}.js`);
         commandFile.run(Client, message, args);
-    } catch (err) {
-        console.error(err);
-    }
+    } catch (err) {}
 })
 
 Client.login(process.env.TOKEN);
