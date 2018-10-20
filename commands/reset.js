@@ -13,7 +13,7 @@ exports.run = (Client, message, args) => {
                 total_withdrawing = targetToWithdraw - (targetToWithdraw * 2);
                 console.log(total_withdrawing)
             })
-            economy.updateBalance(usr.id, parseInt(total_withdrawing));
+            economy.updateBalance(usr.id, 0);
             economy.fetchBalance(usr.id).then(db => {
                 var reset_embed = new Discord.RichEmbed()
                     .setColor('#a2f03e')
