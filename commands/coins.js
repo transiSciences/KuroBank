@@ -15,7 +15,7 @@ exports.run = (Client, message, args) => {
     economy.fetchBalance(message.author.id).then(db => {
             var coins_embed = new Discord.RichEmbed()
                 .setColor('#a2f03e')
-                .addField(`${message.author.username}, vous avez bien été payer de ${coins_rewarded} KuroCoins [${db.money + coins_rewarded}]`, `Tu pourras réutiliser cette commande dans ${cdsecconds.coins_cooldown / 60} minutes`)
+                .addField(`${message.author.username}, vous avez bien été payé de ${coins_rewarded} KuroCoins [${db.money + coins_rewarded}]`, `Tu pourras réutiliser cette commande dans ${cdsecconds.coins_cooldown / 60} minutes`)
                 .setFooter(`Compte de ${message.author.username} | BOT - KuroBank ©`, message.author.avatarURL)
                 .setTimestamp()
             message.channel.send(coins_embed)
