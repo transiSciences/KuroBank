@@ -1,0 +1,24 @@
+{
+  "name": "kurobank",
+  "version": "0.0.1",
+  "description": "Un bot de gestion de monnaie",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "bot",
+    "français",
+    "banque"
+  ],
+  "author": "transiSciences",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "discord-eco": "0.0.10",
+    "discord.js": "^11.4.2",
+    "fs": "0.0.1-security",
+    "moment": "^2.22.2",
+    "nodemon": "^1.18.4"
+  }
+}
