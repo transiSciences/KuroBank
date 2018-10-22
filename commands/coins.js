@@ -22,7 +22,7 @@ exports.run = (Client, message, args) => {
         })
         .setTimeout(() => {
             cooldown.delete(message.author.id);
-        }, cdsecconds.coins_cooldown * 1000);
+        }, cdsecconds.coins_cooldown * 100);
 
 }
 
