@@ -3,7 +3,6 @@ const economy = require('discord-eco');
 const Discord = require('discord.js');
 
 exports.run = (Client, message, args) => {
-    if (!message.author.id === process.env.OWNERID) return message.channel.send(":x: Cette fonction est en développement :hammer_pick:, seul le développeur peut l'utiliser");
     if (!args[1] || isNaN(args[1])) return message.channel.send(":x: Veuillez spécifier un montant numéral");
     if (args[1] <= 0) return message.channel.send(":x: Veuillez indiquer un nombre supérieur à zéro");
     economy.fetchBalance(message.author.id).then(db => {
